@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>This Program requires you to input a numebr and you can increment from it by clicking on the button  </p>
+    <p>
+Write the starting number below :
+    </p>
+
+
+    <input type="text" alt="Input" value="" name="text" id="number"> 
+    <button type="button" onclick="incre()">Couter  </button>
+</body>
+
+<script>
+
+
+function incre() {
+    var number = document.getElementById("number").value * 1
+
+    if (number < 10) {
+       
+    console.log(number)
+    number = number + 1
+    document.getElementById("number").value = number
+    console.log(number)
+    }
+
+    else {
+        document.getElementById("number").value = 0
+    }
+} 
+
+
+
+
+
+
+
+</script>
+</html>

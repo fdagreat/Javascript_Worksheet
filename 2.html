@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table width="100" height="100" margin="2" cellspacing="1" border="1" bgcolor="#CCCCFF">
+    <tr>
+        <td width="25">
+            <input  type="text" name="button" id="num1">
+        </td>
+
+        <td width="25">
+            <input type="text" name="button" id="num2">
+        </td>
+
+        <td width="25">
+            <input type="button" name="button" id="=" value="=" onclick="calculate()">
+       </td>
+
+        <td width="25">
+            <input type="text" name="button" id="ans">
+        </td>
+    </tr>
+    <tr>
+        <td width="25">
+            <input type="button" name="button" id="+" value="+" onclick="add()">
+        </td>
+
+        <td width="25">
+            <input type="button" name="button" id="-" value="-" onclick="sub()">
+        </td>
+
+        
+
+      
+
+        <td width="25">
+            <input type="button" name="button" id="ans" value="/" onclick="div()">
+        </td>
+        <td width="25">
+            <input type="button" name="button" id="ans" value="*" onclick="mul()">
+        </td>
+    </tr>
+
+
+<h3 id="check" value=":"> .</h3>
+<p id="p" class="p"> </p>
+
+
+
+
+
+</table>
+    
+</body>
+
+
+<script>
+var symbol  
+var ans
+var num1
+var num2
+var test 
+var alltest = true
+
+// We are going to make 2 variables and asign them to be blank
+var num1 = " " 
+var num2 = " "
+
+// we are going to make the input box to be a blank space .. which means so that 
+// we can know when it has been changed later on and also this can not be seen 
+// by the user sice its a blank space.
+document.getElementById("num1").value = num1
+document.getElementById("num2").value = num2
+
+
+
+
+
+// We will have 4 fuctions for each sign and we can store the symbol 
+// of the sign using the variable "symbol"
+function add() {
+    symbol = 1
+    console.log("Addition")
+}
+
+function sub() {
+    symbol = 2
+    console.log("Substraction")
+}
+
+function div() {
+    symbol = 3
+    console.log("Division")
+}
+
+function mul() {
+    symbol = 4
+    console.log("Multiplication")
+}
+
+
+function calculate() {
+
+
+// We are going to make new variable num3 and num4 
+// (these are varibles after the user has entered their new values)
+// so that we can use these to compare to the varible num1 and num 2 which are before the user 
+    var num3 = document.getElementById("num1").value
+    var num4 = document.getElementById("num2").value
+
+
+
+
+
+// we are going to test the value of "alltest" and if it is true which is the 
+// the default value that means nothing has changed and we can start doing the testing
+console.log(`The Alltest value is : ${alltest} Therefore we will start testing`)
+ 
+
+console.log("Going to Test")
+
+ //Now we are checking is num3 and num4 are updated by the user or still our default 
+ //values which are from num1 and num2 respectively 
+if (num3 === num1) {
+    console.log("1 is empty")
+    test = 11
+    alltest = false
+    console.log("making false1")
+}
+
+if (num4 === num2) {
+    console.log("2 is empty")
+    test = 22
+    alltest = false
+    console.log("making false2")
+}
+
+if (num3 === num1 && num4 === num2) {
+    console.log("both is empty")
+    test = 33
+    alltest = false
+    console.log("making false3")
+}
+
+
+if (alltest === false) {
+
+console.log("Test Results are False.. THERE ARE SOME MISSING VALUES")
+
+    if (test === 11) {
+    document.getElementById("ans").value = "Box 1 is Empty"
+}
+if (test === 22 ) {
+    document.getElementById("ans").value = "Box 2 is Empty"
+}
+if (test === 33) {
+    document.getElementById("ans").value = "Both Boxes are Empty"
+}
+
+}
+
+else if (alltest === true) {
+
+
+    // Here The tests show that both boxes have value inside so we can start 
+    // calculations 
+
+console.log("Test Results Are True")
+
+num1 = document.getElementById("num1").value * 1
+num2 = document.getElementById("num2").value * 1
+   
+
+if (symbol === 1) {
+
+
+
+    ans = num1 + num2
+    document.getElementById("ans").value = ans
+    console.log(num1)
+    console.log(num2)
+    console.log(symbol)
+    
+    console.log(ans)
+    
+
+}
+if (symbol === 2) {
+
+    ans = num1 - num2
+    document.getElementById("ans").value = ans
+    console.log(num1)
+    console.log(num2)
+    console.log(symbol)
+}
+if (symbol === 3) {
+
+    ans = num1 / num2
+    document.getElementById("ans").value = ans
+    console.log(num1)
+    console.log(num2)
+    console.log(symbol)
+}
+if (symbol === 4) {
+
+    ans = num1 * num2
+    document.getElementById("ans").value = ans
+    console.log(num1)
+    console.log(num2)
+    console.log(symbol)
+}
+
+}
+
+}
+
+
+
+
+</script>
+
+
+</html>
