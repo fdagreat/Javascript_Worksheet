@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>write value </p>
+    <input type="text" id="input" >
+    <button type="button" id="value" onclick="action()"> click</button>
+
+    
+
+</body>
+
+
+<script>
+    var value = document.getElementById("input").value=0;
+function action() {
+var value = document.getElementById("input").value;
+
+if (value >=0 && value < 11){
+    value++
+console.log("correct");
+document.getElementById("input").value = value;
+
+}
+if (value > 10){
+    console.log("correct");
+    document.getElementById("input").value = 0;
+}
+
+
+}
+
+
+</script>
+
+</html>

@@ -1,76 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<head> <title>Click the button</title>
+
+
+
 </head>
+
 <body>
 
     <h3>Press on the button to change the image</h3>
-    <img src="3_images/1.png" id="img" width="300" height="300" >
-    
-    
+    <img src="mha/1.jpg" id="img" width="500" height="300" >
+<br>
+
     <button type="button" id="button" onclick="prev()" > Previous </button>
 
     <button type="button" id="button" onclick="next()" > Next </button>
 </body>
 
 <script>
-  
+
 
 var img = 1
     function next()
     {
-        if (img <= 4) {
+        if (img <= 3) {
 
             img = img + 1
 
-         var location = `3_images/${img}.png`
+         var location = `mha/${img}.jpg`
          document.getElementById("img").src = location
          console.log(location)
-         console.log(img)   
+         console.log(img)
         }
-        
+
         else {
 
             img = 1
 
-            var location = `3_images/${img}.png`
+            var location = `mha/${img}.jpg`
             document.getElementById("img").src = location
             console.log(location)
             console.log(img) 
         }
-     
+
         }
     function prev()
     {
-        if (img <= 4 && img >1 ) {
+        if (img <= 3 && img >1 ) {
 
             img = img - 1
 
-         var location = `3_images/${img}.png`
+         var location = `mha/${img}.jpg`
          document.getElementById("img").src = location
          console.log(location)
-         console.log(img)   
+         console.log(img)
         }
-        
+
         else {
 
             img = 1
 
-            var location = `3_images/${img}.png`
+            var location = `mha/${img}.jpg`
             document.getElementById("img").src = location
             console.log(location)
             console.log(img) 
         }
-     
+
         }
 
 
 
 
-    
+
 
 
 

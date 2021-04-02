@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fill in your info please</h1>
+
+  Name :  <input  id="inname" placeholder="i.e Elon Musk">
+   <br>
+Age :  <input  id="inage" placeholder="i.e 20">
+   <br>
+   Write your best color amoung these (Blue,Black,Pink): <input  id="incolor" placeholder="i.e Blue">
+   <br>
+   Write your best animal amoung these (Cat,Fluffy Cow,Frog): <input  id="inanimal" placeholder="i.e Cat">
+   <br>
+   
+
+<p></p>
+  
+   <p>Click the button below to Submit your details so that they can get Validated</p>
+  
+  
+   <button type="submit" id="button" onclick="newguy()">Submit</button>
+
+   <h3 id="result" value="1"> </h3>
+
+</body>
+
+<script>
+
+//document.getElementById("result").value = "Your Age is not Valid"
+
+
+var numbers= [0,1,2,3,4,5,6,7,8,9]
+var test = true
+var result = true
+
+function hasNumbers(t) // it will return true if the input has numbers false if not
+{
+var regex = /\d/g;
+var test = regex.test(t);
+}  
+
+
+function check_name(name) {
+    hasNumbers(name)
+
+    if (test === true) {
+        result = false 
+    }
+
+    else {
+        result = true
+    }
+}
+function check_age(age) {
+    hasNumbers(age)
+
+    if (test === true) {
+        result = true 
+    }
+
+    else {
+        result = false
+    }
+}
+function check_color(color) {
+    hasNumbers(color)
+
+    if (test === true) {
+        result = false 
+    }
+
+  
+}
+function check_animal(animal) {
+    hasNumbers(animal)
+
+    if (test === true) {
+        result = false 
+    }
+
+    
+}
+
+
+function newguy() {
+
+   var name = document.getElementById("inname").value 
+   var age = document.getElementById("inage").value * 1
+   var color = document.getElementById("incolor").value
+   var animal = document.getElementById("inanimal").value
+
+   console.log(name)
+   console.log(age)
+   console.log(color)
+   console.log(animal)
+
+   console.log("check")
+
+
+
+
+
+
+check_name(name)
+check_age(age)
+check_color(color)
+check_animal(animal)
+
+console.log("Done checking")
+console.log(result)
+
+// console.log(typeof(name))
+// console.log(typeof(age))
+// console.log(typeof(color))
+// console.log(typeof(animal))
+
+
+
+  
+   
+   if (age <0 && age >= 150){
+    console.log("Age too big")
+   }    
+
+
+}
+// function action()
+//  {
+//    var name = document.getElementById.value("inname").value
+//   var age = document.getElementById("inage").value
+//    var color = document.getElementById.value("incolor").value
+//    var animal = document.getElementById.value("inanimal").value
+
+
+//   console.log(name)
+//    console.log(age)
+//    console.log(color)
+//    console.log(animal)
+   
+// //    if (name.type != "text") {
+// //        console.log("Name is not Text")
+// //    }
+// //    if (age.type != "number") {
+// //        console.log("Age is not Number")
+// //    }
+// //    if (color.type != "text") {
+// //        console.log("color is not Text")
+// //    }
+// //    if (animal.type != "text") {
+// //        console.log("Animal is not Text")
+// //    }
+   
+// //    if (age <0 && age >= 150){
+// //     console.log("Age too big")
+// //    }    
+
+
+
+//  }
+
+</script>
+</html>
