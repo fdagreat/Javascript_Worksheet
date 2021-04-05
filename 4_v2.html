@@ -38,53 +38,7 @@ var numbers= [0,1,2,3,4,5,6,7,8,9]
 var test = true
 var result = true
 
-function hasNumbers(t) // it will return true if the input has numbers false if not
-{
-var regex = /\d/g;
-var test = regex.test(t);
-}  
 
-
-function check_name(name) {
-    hasNumbers(name)
-
-    if (test === true) {
-        result = false 
-    }
-
-    else {
-        result = true
-    }
-}
-function check_age(age) {
-    hasNumbers(age)
-
-    if (test === true) {
-        result = true 
-    }
-
-    else {
-        result = false
-    }
-}
-function check_color(color) {
-    hasNumbers(color)
-
-    if (test === true) {
-        result = false 
-    }
-
-  
-}
-function check_animal(animal) {
-    hasNumbers(animal)
-
-    if (test === true) {
-        result = false 
-    }
-
-    
-}
 
 
 function newguy() {
@@ -102,17 +56,51 @@ function newguy() {
    console.log("check")
 
 
+// function hasNumbers(t) // it will return true if the input has numbers false if not
+// {
+//     console.log("this t:")
+//     console.log(t)
+// var regex = /\d/g;
+// var test = regex.test(t);
+
+// }  
+
+// console.log("start")
+// var hasNumber = /\d/;
+// hasNumber.test("name"); // false
+// hasNumber.test("32"); // true
+
+// hasNumbers(name) 
+//console.log(test)
+
+var regex = /\d/g;
+var test = regex.test("name");
+
+console.log(test)
+
+function check_name(name) {
+  //  hasNumbers(name)
+console.log("hello")
+    if (test === true) {
+        result = false 
+        console.log("we are here to false")
+
+    }
+
+    else {
+        result = true
+    }
+}
 
 
 
+//check_name(name)
+// check_age(age)
+// check_color(color)
+// check_animal(animal)
 
-check_name(name)
-check_age(age)
-check_color(color)
-check_animal(animal)
-
-console.log("Done checking")
-console.log(result)
+// console.log("Done checking")
+// console.log(result)
 
 // console.log(typeof(name))
 // console.log(typeof(age))
@@ -123,9 +111,9 @@ console.log(result)
 
   
    
-   if (age <0 && age >= 150){
-    console.log("Age too big")
-   }    
+//    if (age <0 && age >= 150){
+//     console.log("Age too big")
+//    }    
 
 
 }

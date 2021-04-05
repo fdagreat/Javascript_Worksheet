@@ -8,7 +8,7 @@
 <body>
     
     <h3>Input your mark out of 100 to get your grade</h3>
-    <input type="number" id="mark">
+    <input type="number" id="mark" maxlength="3">
     <br>
     <br>
     <button type="button" onclick="calculate()">Show Grade</button>
@@ -21,10 +21,10 @@
 
   function calculate(){
 
-var mark = document.getElementById("mark")
+var mark = document.getElementById("mark").value
 console.log(mark)
 
-document.getElementById("result").value = "mark"
+document.getElementById("result").innerHTML = mark
 
 
     }
