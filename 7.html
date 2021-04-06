@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Input your last number to count to </h3>
+    <input type="number" id="number" maxlength="3">
+    <br>
+    <br>
+    <button type="button" onclick="go()">Count</button>
+
+
+<h3 id="list"></h3>
+    
+</body>
+
+<script>
+
+function go() {
+    
+    var count = 0
+    var number = document.getElementById("number").value * 1
+    var list = ""
+
+    for (count = 0; count <= number; count++) {
+      var id = count
+        list =  list + ` ${count}`
+        document.getElementById("list").innerHTML = `${list}`
+        console.log(count)
+    }
+} 
+
+
+</script>
+</html>
+
+
