@@ -24,7 +24,30 @@
 var mark = document.getElementById("mark").value
 console.log(mark)
 
-document.getElementById("result").innerHTML = mark
+if (mark > 80) {
+    document.getElementById("result").innerHTML = "Your Grade is A"
+}
+if (mark <= 80) {
+    document.getElementById("result").innerHTML = "Your Grade is B"
+}
+if (mark <= 70) {
+    document.getElementById("result").innerHTML = "Your Grade is C"
+}
+if (mark <= 65) {
+    document.getElementById("result").innerHTML = "Your Grade is D"
+}
+if (mark <= 50) {
+    document.getElementById("result").innerHTML = "Your Grade is E"
+}
+if (mark <= 40) {
+    document.getElementById("result").innerHTML = "Your Grade is F"
+}
+if (mark <= 30) {
+    document.getElementById("result").innerHTML = "Your Grade is U"
+}
+
+
+// document.getElementById("result").innerHTML = mark
 
 
     }
