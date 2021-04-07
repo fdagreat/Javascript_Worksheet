@@ -7,8 +7,8 @@
 </head>
 <body>
     
-    <h3>Input your last number to count to </h3>
-    <input type="number" id="number" maxlength="3">
+    <h3>Input your 10 numbers </h3>
+    <input type="number" id="number" maxlength="10">
     <br>
     <br>
     <button type="button" onclick="go()">Count</button>
@@ -24,14 +24,19 @@ function go() {
     
     var count = 0
     var number = document.getElementById("number").value * 1
-    var list = ""
+    var array = [number[0],number[1],number[2],number[3]]
 
-    for (count = 0; count <= number; count++) {
-      var id = count
-        list =  list + ` ${count}`
-        document.getElementById("list").innerHTML = `${list}`
-        console.log(count)
-    }
+    console.log(array[0])
+
+
+    document.getElementById("list").innerHTML = `${array[1]}`
+
+    // for (count = 0; count <= number; count++) {
+    //   var id = count
+    //     list =  list + ` ${count}`
+    //     document.getElementById("list").innerHTML = `${list}`
+    //     console.log(count)
+    // }
 } 
 
 
