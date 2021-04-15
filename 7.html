@@ -11,32 +11,159 @@
     <input type="number" id="number" maxlength="10">
     <br>
     <br>
-    <button type="button" onclick="go()">Count</button>
+    <button type="button" onclick="cal()">Calculate</button>
+    <button type="button" onclick="next()">Next</button>
+    <button type="button" onclick="add()">+</button>
+    <button type="button" onclick="sub()">-</button>
+    <button type="button" onclick="mul()">*</button>
+    <button type="button" onclick="div()">/</button>
 
 
+<h3 id="message0"></h3>
 <h3 id="list"></h3>
+<h3 id="message"></h3>
+<h3 id="info"></h3>
+<h3 id="results"></h3>
+
     
 </body>
 
 <script>
+var check
+var arth
+var arth_check
+var arth_value
+var next
+var p 
+var n = 0
+var num = [0,0,0,0,0,0,0,0,0,0]
+var list = ""
+var ans = ""
+var button = true
+var valid = false
 
-function go() {
+
+function check() {
+    if(button = true) {
+        valid = true
+    }
+    message = "The Arthmetic sign has not been choosen"
+
+    if(p<10) {
+        valid = false
+        message = `${message}, Please Finish entering all 10 numbers`
+    }
+}
+
+
+
+function next() {
+    if (n<=9) {
+        document.getElementById("message0").innerHTML = "Bewlow are your numbers"
+
+    num[p] = document.getElementById("number").value * 1
+    list = `${list} ${num[p]} ,`
+    num[n] = num[p]
+    document.getElementById("list").innerHTML = list
+    p++
+    n++
+    document.getElementById("info").innerHTML = `you just entered your, ${n} number`
+    document.getElementById("message").value = 0
+
+    }
+
+    else{
+        document.getElementById("message").innerHTML = "You can't add another number, Now choose your arthmetric sign"
+
+    }
     
-    var count = 0
-    var number = document.getElementById("number").value * 1
-    var array = [number[0],number[1],number[2],number[3]]
+}
 
-    console.log(array[0])
+    
+function add() {
+button = true
+arth = add
+document.getElementById("info").innerHTML = "Click Calculate and get your numbers Added by 10"
+}
+function sub() {
+button = true
+arth = sub
+document.getElementById("info").innerHTML = "Click Calculate and get your numbers Subtracted by 10"
+}
+function div() {
+button = true
+arth = div
+document.getElementById("info").innerHTML = "Click Calculate and get your numbers Divided by 10"
+}
+function mul() {
+button = true
+arth = mul
+document.getElementById("info").innerHTML = "Click Calculate and get your numbers Multiplied by 10"
+}
 
 
-    document.getElementById("list").innerHTML = `${array[1]}`
+function cal() {
+    check()
+    console.log(arth)
+    
+    if (valid = true) {
+        // the althmentics have been clicked 
+        console.log("We in");
+       // num = list
+        console.log(num)
+        console.log(list)
 
-    // for (count = 0; count <= number; count++) {
-    //   var id = count
-    //     list =  list + ` ${count}`
-    //     document.getElementById("list").innerHTML = `${list}`
-    //     console.log(count)
-    // }
+        if(arth === add) {
+            for (let i = 0; i <= 9; i++) {
+                num[i] = num[i] + 10
+                ans = `${ans} ${num[i]},`
+                console.log("Adding")
+                console.log(num[i])
+            }
+        }
+        if(arth === sub) {
+            for (let i = 0; i <= 9; i++) {
+                num[i] = num[i] - 10
+                ans = `${ans} ${num[i]},`
+                console.log("Substracting")
+                console.log(num[i])
+            }
+        }
+        if(arth === div) {
+            for (let i = 0; i <= 9; i++) {
+                num[i] = num[i] / 10
+                ans = `${ans} ${num[i]},`
+                console.log("Dividing")
+                console.log(num[i])
+            }
+        }
+        if(arth === mul) {
+            for (let i = 0; i <= 9; i++) {
+                num[i] = num[i] * 10
+                ans = `${ans} ${num[i]},`
+                console.log("Multiplying")
+                console.log(num[i])
+            }
+        }
+
+
+    document.getElementById("results").innerHTML = `${ans}`
+    console.log(ans)
+
+    }
+
+    else {
+        console.log("We out, Invalid");
+        console.log(num)
+        console.log(list)
+
+
+        document.getElementById("list").innerHTML = "Please make sure you have written all 10 digits and choosen the arthmetric"
+    }
+
+
+
+   
 } 
 
 
